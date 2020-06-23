@@ -1949,7 +1949,7 @@ Function TattooRegistry
         }
     }
     
-    If ($ServicingStack = $true)
+    If ($ServicingStack -eq $true)
     {
         $PathToScan = "$TempPath\Servicing"
         $FileName = (Get-ChildItem -Path $PathToScan).Name
@@ -1963,7 +1963,7 @@ Function TattooRegistry
         }
     }
 
-    If ($CumulativeUpdate = $true)
+    If ($CumulativeUpdate -eq $true)
     {
         $PathToScan = "$TempPath\Cumulative"
         $FileName = (Get-ChildItem -Path $PathToScan).Name
@@ -1977,7 +1977,7 @@ Function TattooRegistry
         }
     }
 
-    If ($CumulativeDotNetUpdate = $true)
+    If ($CumulativeDotNetUpdate -eq $true)
     {
         $PathToScan = "$TempPath\DotNet"
         $FileName = (Get-ChildItem -Path $PathToScan).Name
@@ -1991,7 +1991,7 @@ Function TattooRegistry
         }
     }
 
-    If ($AdobeFlashUpdate = $true)
+    If ($AdobeFlashUpdate -eq $true)
     {
         $PathToScan = "$TempPath\Adobe"
         $FileName = (Get-ChildItem -Path $PathToScan).Name
@@ -2005,7 +2005,7 @@ Function TattooRegistry
         }
     }
 
-    If ($Office365 = $true)
+    If ($Office365 -eq $true)
     {
         $PathToScan = "$TempPath\Office365"
         $FileName = (Get-ChildItem -Path $PathToScan -Recurse | Where-Object { ($_.PSIsContainer) -and ($_.Name -like "16.*") }).Name
